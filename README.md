@@ -2,11 +2,13 @@
 
 Use shared libraries in Matlab instead of MEX-Files.
 
-In my opinion a wrapper should always be defined in the wrapping language (here MATLAB) and not in the language the wrapped library is written (here C).
+*In my opinion, a library wrapper should always be defined in the wrapping language (here MATLAB) and not in the language the wrapped library is written (here C), because this complies to the DRY principle.*
+
 
 ## Note
 
-Unfortunately **this not compatible with Octave**, since Octave does not provide the `loadlibrary` FFI functionality.
+Unfortunately **this is not compatible with Octave**, since Octave does not provide the `loadlibrary` FFI functionality.
+
 
 ## Consider you have some clean C-code
 
@@ -26,10 +28,10 @@ int max(int num1, int num2) {
    return result; 
 }
 
-
 ```
 
 Compiled to a shared library e.g. `maxlib.so` or `maxlib.dll`.
+
 
 ## You can use this shared library in Matlab as follows
 
