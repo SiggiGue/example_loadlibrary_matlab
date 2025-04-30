@@ -2,9 +2,6 @@
 
 Use shared libraries in Matlab instead of MEX-Files.
 
-*In my opinion, a library wrapper should always be defined in the wrapping language (here MATLAB) and not in the language the wrapped library is written (here C), because this complies to the DRY principle.*
-
-
 ## Note
 
 Unfortunately **this is not compatible with Octave**, since Octave does not provide the `loadlibrary` FFI functionality.
